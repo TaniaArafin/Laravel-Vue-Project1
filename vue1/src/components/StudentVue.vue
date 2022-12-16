@@ -12,7 +12,7 @@
     </div>
     </form>
    
-    <h2>Students list</h2>
+   <h2>Students list</h2>
     <table class="table table-hover table-light mx-auto w-75">
     <thead>
         <tr>
@@ -57,7 +57,7 @@ export default {
         phone:''
       }
     }
-  },
+   },
   created(){
     this.StudentLoad();
   },

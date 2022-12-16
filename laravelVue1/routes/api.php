@@ -3,7 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\StudentController;
+
+use App\Http\Controllers\API\UserAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,9 @@ Route::post('/save',[\App\Http\Controllers\StudentController::class, 'store']);
 Route::put('/update/{id}',[\App\Http\Controllers\StudentController::class, 'update']);
 Route::delete('/delete/{id}',[\App\Http\Controllers\StudentController::class, 'destroy']);
 
+Route::controller(UserAuthController::class)->group(function(){
+    Route::post('login', 'login');
+    Route::post('register', 'register');
 
+
+});
